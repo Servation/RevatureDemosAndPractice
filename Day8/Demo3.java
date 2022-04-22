@@ -13,7 +13,7 @@ public class Demo3 {
 
         // before sorting
         System.out.println("before sorting...");
-        for(String color: colors){
+        for (String color : colors) {
             System.out.println(color);
         }
         System.out.println();
@@ -21,14 +21,15 @@ public class Demo3 {
         // after sorting
         System.out.println("after sorting...");
         Collections.sort(colors);
-        for(String color: colors){
+        for (String color : colors) {
             System.out.println(color);
         }
         System.out.println();
 
         // reverse sorting
+        System.out.println("reverse sorting...");
         Collections.reverse(colors);
-        for(String color: colors){
+        for (String color : colors) {
             System.out.println(color);
         }
         System.out.println();

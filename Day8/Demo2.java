@@ -20,7 +20,7 @@ public class Demo2 {
         System.out.println(names);
 
         // forEach to print out each item of the Array
-        for(String name: names){
+        for (String name : names) {
             System.out.println(name);
         }
     }
