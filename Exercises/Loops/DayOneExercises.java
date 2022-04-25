@@ -1,8 +1,8 @@
-package com.revature.Day1;
+package com.revature.Exercises.Loops;
 
 import java.util.Scanner;
 
-public class Exercises {
+public class DayOneExercises {
     public static void main(String[] args) {
         exercise1();
         System.out.println();

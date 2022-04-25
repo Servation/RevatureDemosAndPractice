@@ -1,4 +1,4 @@
-package com.revature.Day9;
+package com.revature.Exercises.Collections;
 
 // TreeSet
 // 1. Write a Java program to create a new tree set, add some colors (string) and print out the tree set.

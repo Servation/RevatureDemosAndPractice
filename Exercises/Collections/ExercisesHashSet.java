@@ -1,4 +1,4 @@
-package com.revature.Day9;
+package com.revature.Exercises.Collections;
 
 // HashSet
 // 1. Write a Java program to append the specified element to the end of a hash set.

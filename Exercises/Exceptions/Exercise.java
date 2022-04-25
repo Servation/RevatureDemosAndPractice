@@ -1,4 +1,4 @@
-package com.revature.Day7;
+package com.revature.Exercises.Exceptions;
 
 import java.util.ArrayList;
 

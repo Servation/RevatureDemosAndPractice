@@ -1,4 +1,4 @@
-package com.revature.Day9;
+package com.revature.Exercises.Collections;
 
 import java.util.ArrayList;
 import java.util.Collections;
