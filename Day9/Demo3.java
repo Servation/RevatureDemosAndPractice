@@ -20,6 +20,12 @@ public class Demo3 {
             System.out.println(iterator.next());
         }
 
+        // HashSet methods:
+        // remove()
+        // removeAll()
+        // removeIf()
+        // clear()
+
         set.remove("Paul");
         System.out.println(set);
     }
