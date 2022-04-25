@@ -33,7 +33,7 @@ public class Exercises {
         System.out.println();
 
         // 5
-        insertElementToArrAt(0, "z", arrayList);
+        insertElementToArrAt(0, "E", arrayList);
 
         System.out.println(allElements(arrayList));
     }
