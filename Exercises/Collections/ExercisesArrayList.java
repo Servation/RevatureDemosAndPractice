@@ -11,7 +11,7 @@ import java.util.Collections;
 // 4. Write a Java program to iterate a linked list in reverse order
 // 5. Write a Java program to insert the specified element at the specified position in the
 //    linked list.
-public class Exercises {
+public class ExercisesArrayList {
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<>();
         // 1

@@ -65,6 +65,7 @@ public class ExercisesTreeSet {
         System.out.println(set);
     }
 
+    // 4
     public static String questionFour(TreeSet<String> set){
         StringBuilder out = new StringBuilder();
         Iterator iterator = set.descendingIterator();
@@ -74,6 +75,7 @@ public class ExercisesTreeSet {
         return out.toString();
     }
 
+    // 5
     public static String questionFive(TreeSet<String> set) {
         return "First: " + set.pollFirst() + " | Last: " + set.pollLast();
     }

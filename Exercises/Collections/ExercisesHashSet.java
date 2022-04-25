@@ -43,10 +43,12 @@ public class ExercisesHashSet {
         return output.toString();
     }
 
+    // 3
     public static int numOfElementsHashSet(HashSet<String> set){
         return set.size();
     }
 
+    // 4
     public static void emptyHashSet(HashSet<String> set){
         set.clear();
     }
