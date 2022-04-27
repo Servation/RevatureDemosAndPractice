@@ -16,9 +16,10 @@ class Bank {
 
     synchronized void withdraw(int amount) {
         if (balance < amount) {
-            System.out.println("Balance insufficient. Current balance: " + balance);
+            System.out.println("Balance insufficient. Current balance: " + balance + " | Withdraw amount: " + amount);
             try {
                 wait();
+                System.out.println("Withdraw amount: " + amount + " | Withdrawing...");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -28,7 +29,7 @@ class Bank {
     }
 
     synchronized void deposit(int amount) {
-        System.out.println("Deposit processing...");
+        System.out.println("Deposit amount: " + amount + " | Deposit processing...");
         balance += amount;
         System.out.println("Deposit completed. Current balance: " + balance);
         notify();
