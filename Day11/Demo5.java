@@ -5,7 +5,7 @@ public class Demo5 {
         final String resource1 = "first resource";
         final String resource2 = "second resource";
 
-        Thread t1 = new Thread(){
+        Thread t1 = new Thread() {
             @Override
             public void run() {
                 synchronized (resource1) {
@@ -22,7 +22,7 @@ public class Demo5 {
             }
         };
 
-        Thread t2 = new Thread(){
+        Thread t2 = new Thread() {
             @Override
             public void run() {
                 synchronized (resource2) {
