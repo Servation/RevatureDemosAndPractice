@@ -16,7 +16,7 @@ public class Demo3 {
         }
         System.out.println("---------------");
         Collections.sort(employees);
-        System.out.println("after sorting(based on age)...");
+        System.out.println("after sorting(based on name)...");
         for (Employee employee : employees) {
             System.out.println(employee);
         }
@@ -45,9 +45,9 @@ class Employee implements Comparable<Employee>{
 
     @Override
     public int compareTo(Employee o) {
-//        if (this.age > o.id) {
+//        if (this.id > o.id) {
 //            return 1;
-//        } else if (this.age < o.id) {
+//        } else if (this.id < o.id) {
 //            return -1;
 //        } else {
 //            return 0;
