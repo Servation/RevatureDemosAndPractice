@@ -18,7 +18,9 @@ public class Demo4 {
         System.out.println("------------");
 //        Collections.sort(students);
 //        Collections.reverse(students);
-        Collections.sort(students, new SortByName());
+//        Collections.sort(students, new SortByName());
+//        Collections.sort(students, Comparator.comparing(student -> student.name));
+        Collections.sort(students, (currStudent, nextStudent) -> currStudent.name.compareTo(nextStudent.name));
         System.out.println("after sorting...");
         for (Student student : students) {
             System.out.println(student);
