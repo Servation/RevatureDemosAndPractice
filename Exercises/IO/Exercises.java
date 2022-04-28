@@ -17,43 +17,43 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String[] args) {
         // 1
-        System.out.println("All files in src/com/revature/Exercises: ");
+        System.out.println("1) All files in src/com/revature/Exercises: ");
         File ex1File = new File("src/com/revature/Exercises");
         System.out.println(ex1(ex1File));
 
         // 2
-        System.out.println("Files matching the extension \"txt\" in db folder: ");
+        System.out.println("2) Files matching the extension \"txt\" in db folder: ");
         File ex2File = new File("db");
         System.out.println(ex2(ex2File, "txt"));
 
         // 3
-        System.out.println("Check if files or directory exists in db2 folder: ");
+        System.out.println("3) Check if files or directory exists in db2 folder: ");
         File ex3File = new File("db2");
         System.out.println(ex3(ex3File));
         System.out.println();
 
         // 4
-        System.out.println("Check if this file is a directory or a file");
+        System.out.println("4) Check if this file is a directory or a file for src/com/revature/Exercises/IO/Exercises.java");
         File ex4File = new File(ex1File, "IO/Exercises.java");
         System.out.println(ex4(ex4File));
         System.out.println();
 
         // 5
-        System.out.println("Read input from java console: ");
+        System.out.println("5) Read input from java console: ");
         System.out.println("You typed: " + ex5());
         System.out.println();
 
         // 6
-        System.out.println("Content of file data2.txt: ");
+        System.out.println("6) Content of file data2.txt: ");
         File ex6File = new File("data2.txt");
         System.out.println(ex6(ex6File));
 
         // 7
-        System.out.println("Reading content of first 3 lines from data2.txt: ");
+        System.out.println("7) Reading content of first 3 lines from data2.txt: ");
         System.out.println(ex7(ex6File));
 
         // 8
-        System.out.println("The longest word in the file data2.txt: ");
+        System.out.println("9) The longest word in the file data2.txt: ");
         System.out.println(ex8(ex6File));
     }
 
@@ -94,8 +94,7 @@ public class Exercises {
     // 5
     public static String ex5(){
         String input = "You didn't type anything out";
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        try {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))){
             input = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
@@ -106,8 +105,7 @@ public class Exercises {
     // 6
     public static String ex6(File file) {
         StringBuilder out = new StringBuilder();
-        try {
-            Scanner fileReader = new Scanner(file);
+        try (Scanner fileReader = new Scanner(file)){
             while (fileReader.hasNextLine()) {
                 out.append(fileReader.nextLine()).append("\n");
             }
@@ -120,9 +118,8 @@ public class Exercises {
     // 7
     public static String ex7(File file) {
         StringBuilder out = new StringBuilder();
-        try {
+        try (Scanner fileReader = new Scanner(file)){
             int count = 0;
-            Scanner fileReader = new Scanner(file);
             while (count < 3 && fileReader.hasNextLine()) {
                 count++;
                 out.append(fileReader.nextLine()).append("\n");
@@ -135,8 +132,7 @@ public class Exercises {
 
     public static String ex8(File file) {
         String out = "";
-        try {
-            Scanner fileReader = new Scanner(file);
+        try (Scanner fileReader = new Scanner(file)) {
             while (fileReader.hasNext()) {
                 String current = fileReader.next();
                 if (current.length() > out.length()) {
