@@ -130,6 +130,7 @@ public class Exercises {
         return out.toString();
     }
 
+    // 8
     public static String ex8(File file) {
         String out = "";
         try (Scanner fileReader = new Scanner(file)) {
