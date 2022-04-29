@@ -29,6 +29,6 @@ public class Demo5 {
 
         // with using stream
         evenNumbers = numbers.stream().filter(number -> number % 2 == 0).collect(Collectors.toList());
-        System.out.println("Even numbers from stream: " +evenNumbers);
+        System.out.println("Even numbers from stream: " + evenNumbers);
     }
 }
