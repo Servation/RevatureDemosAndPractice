@@ -2,18 +2,13 @@ package com.revature.Practice;
 
 
 import java.sql.*;
-import java.util.Map;
-import java.util.Properties;
 
 public class JDBCPractice {
     public static void main(String[] args) {
-        Map<String, String> p = System.getenv();
-        for (String envName : p.keySet()) {
-            System.out.format("%s=%s%n", envName, p.get(envName));
-        }
-        System.out.println(p);
+
+        String password = System.getenv("mysql_pass");
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/university", "root", "apples123");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/university", "root", password);
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from engineeringstudent");
             System.out.println("--Students--");
