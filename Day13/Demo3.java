@@ -12,6 +12,6 @@ public class Demo3 {
         list.add("Watson");
         list.add("John");
 
-        list.forEach((name) -> System.out.println(name));
+        list.forEach(System.out::println);
     }
 }

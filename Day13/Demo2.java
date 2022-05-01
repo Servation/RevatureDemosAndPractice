@@ -9,7 +9,7 @@ public class Demo2 {
         ISayHello2 hey = (name) -> "Welcome " + name;
         System.out.println(hey.hello("Mark"));
 
-        ICalculator adder = (x, y) -> x + y;
+        ICalculator adder = Integer::sum;
         System.out.println(adder.addNumber(100, 200));
     }
 }
