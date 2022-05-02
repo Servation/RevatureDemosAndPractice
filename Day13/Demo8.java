@@ -13,7 +13,7 @@ public class Demo8 {
 
         productList
                 .stream()
-                .filter(product -> product.price >15000)
+                .filter(product -> product.price > 15000)
                 .forEach(product -> System.out.println(product.name));
     }
 }
@@ -28,6 +28,4 @@ class Product {
         this.name = name;
         this.price = price;
     }
-
-
 }

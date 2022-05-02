@@ -21,14 +21,14 @@ public class Demo9 {
         // stream
         List<Integer> finalList2 = numbers
                 .stream()
-                .map(num -> num *5)
+                .map(num -> num * 5)
                 .collect(Collectors.toList());
 
-        System.out.println("numbers list multiplied by 5 using stream: " +finalList2);
+        System.out.println("numbers list multiplied by 5 using stream: " + finalList2);
 
         List<Integer> squares = numbers
                 .stream()
-                .map(x -> x *x)
+                .map(x -> x * x)
                 .collect(Collectors.toList());
         System.out.println("numbers list multiplied by itself using stream: " + squares);
     }
