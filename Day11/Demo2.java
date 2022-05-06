@@ -3,7 +3,7 @@ package com.revature.Day11;
 public class Demo2 {
     public static void main(String[] args) {
         Table table = new Table();
-        MyThread1 t1 = new MyThread1(table);
+        Thread t1 = new Thread(new MyThread1(table));
         MyThread2 t2 = new MyThread2(table);
 
         t1.start();
@@ -26,7 +26,7 @@ class Table {
     }
 }
 
-class MyThread1 extends Thread {
+class MyThread1 implements Runnable {
     Table table;
 
     public MyThread1(Table table) {

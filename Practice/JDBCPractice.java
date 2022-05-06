@@ -15,10 +15,11 @@ public class JDBCPractice {
             while (resultSet.next()) {
                 System.out.print("Name: ");
                 System.out.println(resultSet.getString("First_Name") +" "+ resultSet.getString("Last_Name"));
-
             }
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
     }
 }

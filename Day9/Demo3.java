@@ -14,7 +14,7 @@ public class Demo3 {
         set.add(null);
         set.add(null); // will be ignored
 
-        Iterator iterator = set.iterator();
+        Iterator<String> iterator = set.iterator();
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());

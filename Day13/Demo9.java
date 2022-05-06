@@ -21,8 +21,7 @@ public class Demo9 {
         // stream
         List<Integer> finalList2 = numbers
                 .stream()
-                .map(num -> num * 5)
-                .collect(Collectors.toList());
+                .map(num -> num * 5).toList();
 
         System.out.println("numbers list multiplied by 5 using stream: " + finalList2);
 
